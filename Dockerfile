@@ -15,6 +15,4 @@ RUN pip install -r REQUIREMENTS
 
 EXPOSE 8000
 
-VOLUME /var/local/www/adminbuy/static
-
 ENTRYPOINT ["/usr/local/bin/gunicorn", "-w", "2", "-b", "0.0.0.0:8000", "app:app"]
